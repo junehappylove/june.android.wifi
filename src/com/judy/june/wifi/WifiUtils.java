@@ -37,7 +37,7 @@ public class WifiUtils {
 	 * @return
 	 */
 	private static StringBuffer getWifiConf(){
-		Process process = null;//
+		Process process = null;
 		DataOutputStream out = null;
 		DataInputStream in = null;
 		StringBuffer sb = new StringBuffer();
@@ -47,7 +47,7 @@ public class WifiUtils {
 			out = new DataOutputStream(process.getOutputStream());//
 			in = new DataInputStream(process.getInputStream());//
 			out.writeBytes("cat /data/misc/wifi/*.conf\n");//
-			out.writeBytes("exit\n");//�˳�
+			out.writeBytes("exit\n");
 			out.flush();
 			InputStreamReader reader = new InputStreamReader(in, "UTF-8");//
 			BufferedReader br = new BufferedReader(reader);

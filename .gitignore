@@ -1,6 +1,7 @@
 .classpath
 .project
 .settings/
+.idea/
 assets/
 # Built application files
 *.apk
