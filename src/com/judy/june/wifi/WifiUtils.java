@@ -47,9 +47,11 @@ public class WifiUtils {
 			out = new DataOutputStream(process.getOutputStream());//
 			in = new DataInputStream(process.getInputStream());//
 			out.writeBytes("cat /data/misc/wifi/*.conf\n");//
+
 			out.writeBytes("exit\n");
+
 			out.flush();
-			InputStreamReader reader = new InputStreamReader(in, "UTF-8");//
+			InputStreamReader reader = new InputStreamReader(in, "UTF-8");
 			BufferedReader br = new BufferedReader(reader);
 			String line = null;
 			while ((line = br.readLine())!=null) {
@@ -59,17 +61,17 @@ public class WifiUtils {
 			reader.close();
 			process.waitFor();
 		} catch (IOException e) {
-			Log.e("wifi", "process or stream run error!", e);
+			Log.e("mywifi", "process or stream run error!", e);
 			e.printStackTrace();
 		} catch (InterruptedException e) {
-			Log.e("wifi", "process close error!", e);
+			Log.e("mywifi", "process close error!", e);
 			e.printStackTrace();
 		} finally{
 			try {
 				in.close();
 				out.close();
 			} catch (IOException e) {
-				Log.e("wifi", "stream close error!", e);
+				Log.e("mywifi", "stream close error!", e);
 				e.printStackTrace();
 			}
 			process.destroy();

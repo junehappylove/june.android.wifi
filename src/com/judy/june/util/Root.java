@@ -29,7 +29,7 @@ public class Root {
 				return false;
 			}
 		} catch (Exception e) {
-			Log.d("*** DEBUG ***", "Unexpected error - Here is what I know: " + e.getMessage());
+			Log.d("mywifi", "Unexpected error - Here is what I know: " + e.getMessage());
 			return false;
 		} finally {
 			try {
