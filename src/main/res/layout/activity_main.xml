@@ -10,10 +10,30 @@
     tools:context="com.judy.june.wifi.MainActivity" >
 
     <ListView
-        android:id="@+id/listView1"
+        android:id="@+id/list_wifi"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true" >
+        android:layout_above="@+id/btn_gps"
+        android:layout_centerHorizontal="true" >
+
     </ListView>
+
+    <Button
+        android:id="@+id/btn_gps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="onGPSClick"
+        android:text="@+string/btn_text_gps" />
+
+    <Button
+        android:id="@+id/btn_location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/list_wifi"
+        android:layout_below="@+id/list_wifi"
+        android:onClick="onQZDWClick"
+        android:text="@+string/btn_text_location" />
 
 </RelativeLayout>

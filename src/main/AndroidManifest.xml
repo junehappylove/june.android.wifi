@@ -22,10 +22,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-     
+        <activity
+            android:name="com.judy.june.gps.GPSLocation"
+            android:label="@string/title_activity_gpslocation" >
+        </activity>
     </application>
 
-    <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    
+    <!-- 声明手机粗略定位授权 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 声明手机精细定位授权 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 声明手机模拟定位授权 -->
+    <!--<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />-->
+    <!-- 声明联网授权 -->
+    <uses-permission android:name="android.permission.INTERNET" />
 </manifest>
